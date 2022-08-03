@@ -44,13 +44,14 @@ Write.Print("This program is: ", Colors.purple_to_blue, interval=0)
 Write.Print(f"{random.choice(h_h2)}\n", Colors.green_to_white, interval=0)
 Write.Print("Started at: " + now.strftime("%Y/%m/%d %H:%M:%S\n"), Colors.purple_to_blue , interval=0)
 time.sleep(1)
+Write.Print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n", Colors.rainbow, interval=0)
 set_title("Bloody Proxy Scraper V2 | Made By: Bloody | Scraping Proxies . . .")
-Write.Print("\n[?] Scraping Proxies . . .\n", Colors.red_to_yellow, interval=0)
+Write.Print("[?] Scraping Proxies . . .\n", Colors.red_to_yellow, interval=0)
 
-http = open('http.txt','wb')
-socks4 = open('socks4.txt','wb')
-socks5 = open('socks5.txt','wb')
-allp = open('all.txt','wb')
+http = open('proxies-http.txt','wb')
+socks4 = open('proxies-socks4.txt','wb')
+socks5 = open('proxies-socks5.txt','wb')
+allp = open('proxies-all.txt','wb')
 
 # HTTP Proxies Sources
 h = requests.get("https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-https.txt")
@@ -66,6 +67,8 @@ h9 = requests.get("https://www.proxy-list.download/api/v1/get?type=https")
 h10 = requests.get("https://www.proxyscan.io/download?type=http")
 h11 = requests.get("https://www.proxyscan.io/download?type=https")
 h12 = requests.get("https://api.openproxylist.xyz/http.txt")
+set_title(f"Bloody Proxy Scraper V2 | Made By: Bloody | Scraped HTTP Proxies!")
+Write.Print("\n[?] Scraped HTTP Proxies!\n", Colors.red_to_yellow, interval=0)
 
 # SOCKS4 Proxies Sources
 s4 = requests.get("https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-socks4.txt")
@@ -77,6 +80,8 @@ s45 = requests.get("https://raw.githubusercontent.com/TheSpeedX/PROXY-List/maste
 s46 = requests.get("https://www.proxy-list.download/api/v1/get?type=socks4")
 s47 = requests.get("https://www.proxyscan.io/download?type=socks4")
 s48 = requests.get("https://api.openproxylist.xyz/socks4.txt")
+set_title(f"Bloody Proxy Scraper V2 | Made By: Bloody | Scraped SOCKS4 Proxies!")
+Write.Print("[?] Scraped SOCKS4 Proxies!\n", Colors.red_to_yellow, interval=0)
 
 # SOCKS5 Proxies Sources
 s5 = requests.get("https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-socks5.txt")
@@ -90,6 +95,8 @@ s57 = requests.get("https://raw.githubusercontent.com/hookzof/socks5_list/master
 s58 = requests.get("https://www.proxy-list.download/api/v1/get?type=socks5")
 s59 = requests.get("https://www.proxyscan.io/download?type=socks5")
 s510 = requests.get("https://api.openproxylist.xyz/socks5.txt")
+set_title(f"Bloody Proxy Scraper V2 | Made By: Bloody | Scraped SOCKS5 Proxies!")
+Write.Print("[?] Scraped SOCKS5 Proxies!\n", Colors.red_to_yellow, interval=0)
 
 # All Proxies Sources
 all1 = requests.get("https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies.txt")
@@ -104,12 +111,15 @@ all9 = requests.get("http://hack-hack.chat.ru/proxy/p4.txt")
 all10 = requests.get("http://olaf4snow.com/public/proxy.txt")
 all11 = requests.get("http://alexa.lr2b.com/proxylist.txt")
 all12 = requests.get("http://inav.chat.ru/ftp/proxy.txt")
+set_title(f"Bloody Proxy Scraper V2 | Made By: Bloody | Scraped ALL Proxies!")
+Write.Print("[?] Scraped ALL Proxies!\n", Colors.red_to_yellow, interval=0)
 
 set_title(f"Bloody Proxy Scraper V2 | Made By: Bloody | Finished Scraping Proxies!")
 Write.Print(f"[!] Finished Scraping Proxies!\n", Colors.green_to_white, interval=0)
+Write.Print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n", Colors.rainbow, interval=0)
 time.sleep(1)
 set_title("Bloody Proxy Scraper V2 | Made By: Bloody | Writing Proxies . . .")
-Write.Print("[?] Writing Proxies In Files . . .\n", Colors.red_to_yellow, interval=0)
+Write.Print("[?] Writing Proxies In Files . . .\n\n", Colors.red_to_yellow, interval=0)
 time.sleep(1)
 
 # Writing Proxies In Their Files
@@ -127,6 +137,8 @@ http.write(h9.content)
 http.write(h10.content)
 http.write(h11.content)
 http.write(h12.content)
+Write.Print("[?] Wrote HTTP Proxies!\n", Colors.red_to_yellow, interval=0)
+time.sleep(1)
 
 # Writing SOCKS4 Proxies
 socks4.write(s4.content)
@@ -138,6 +150,8 @@ socks4.write(s45.content)
 socks4.write(s46.content)
 socks4.write(s47.content)
 socks4.write(s48.content)
+Write.Print("[?] Wrote SOCKS4 Proxies!\n", Colors.red_to_yellow, interval=0)
+time.sleep(1)
 
 # Writing SOCKS5 Proxies
 socks5.write(s5.content)
@@ -151,6 +165,8 @@ socks5.write(s57.content)
 socks5.write(s58.content)
 socks5.write(s59.content)
 socks5.write(s510.content)
+Write.Print("[?] Wrote SOCKS5 Proxies!\n", Colors.red_to_yellow, interval=0)
+time.sleep(1)
 
 # Writing All Proxies 
 allp.write(all1.content)
@@ -165,9 +181,12 @@ allp.write(all9.content)
 allp.write(all10.content)
 allp.write(all11.content)
 allp.write(all12.content)
+Write.Print("[?] Wrote ALL Proxies!\n", Colors.red_to_yellow, interval=0)
+time.sleep(1)
 
 set_title("Bloody Proxy Scraper V2 | Made By: Bloody | Wrote Proxies!")
 Write.Print("[!] Finished Writing Proxies In Files!\n", Colors.green_to_white, interval=0)
+Write.Print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n", Colors.rainbow, interval=0)
 time.sleep(1)
 set_title("Bloody Proxy Scraper V2 | Made By: Bloody | Closing Files . . .")
 Write.Print("[?] Closing Files . . .\n", Colors.red_to_yellow, interval=0)
